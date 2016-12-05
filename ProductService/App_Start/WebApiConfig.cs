@@ -14,6 +14,7 @@ namespace ProductService
             // All mappings of (path => model type) to be used in the app
             builder.EntitySet<Product>("Products");
             builder.EntitySet<Person>("People");
+            
 
             config.MapODataServiceRoute(
                 routeName: "ODataRoute",

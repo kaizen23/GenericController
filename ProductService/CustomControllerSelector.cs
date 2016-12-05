@@ -26,7 +26,8 @@ namespace ProductService
             IDictionary<string, HttpControllerDescriptor> dictionary = new Dictionary<string, HttpControllerDescriptor>();
 
             // Map root controller
-            dictionary.Add("", new HttpControllerDescriptor(config, "Index", typeof(HomeController)));
+            dictionary.Add("", new HttpControllerDescriptor(config, "Home", typeof(HomeController)));
+            dictionary.Add("Index", new HttpControllerDescriptor(config, "Index", typeof(IndexController)));//Jak dodac kolejny kontroler?
 
             foreach (EntitySetConfiguration set in entitySets)
             {
